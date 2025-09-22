@@ -8,7 +8,7 @@
 4. [Download Paper](#download-paper-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
 
-# Dowload Minecraft
+## Dowload Minecraft
 1.
 2.
 3.
@@ -20,4 +20,4 @@
 9.
 10.
 
-# Download Paper
+## Download Paper
