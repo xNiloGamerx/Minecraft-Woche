@@ -6,3 +6,18 @@
 3. [Download IntelliJ](#download-intellij-) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
 
 4. [Download Paper](#download-paper-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
+
+
+# Dowload Minecraft
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+
+# Download Paper
