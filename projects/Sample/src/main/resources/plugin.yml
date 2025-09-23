@@ -1,6 +1,6 @@
-name: Sample
+name: Main
 version: '1.0-SNAPSHOT'
-main: com.nik.sample.Sample
+main: com.nik.sample.Main
 api-version: '1.21'
 commands:
   inv:
