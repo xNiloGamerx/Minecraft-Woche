@@ -1,3 +1,5 @@
+![Tag 1 - Montag](./gifs/Tag_1.gif)
+
 # Setup Guide
 
 <!-- Structure -->
