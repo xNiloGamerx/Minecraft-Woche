@@ -1,8 +1,4 @@
-<img src="./gifs/Tag_1.gif">
-<img src="./gifs/Tag_2.gif">
-<img src="./gifs/Tag_3.gif">
-<img src="./gifs/Tag_4.gif">
-<img src="./gifs/Tag_5.gif">
+<img src="./Progress Bar/Tag_1.gif">
 
 # Setup Guide
 
@@ -62,7 +58,7 @@ Java ist die absolute Basis, in dieser Objektorientierten Programmiersprache sch
 <!-- Doppel Leerzeichen macht neue Zeile -->
 > **Note:**  
 > Java JDK 21 wird benötigt um Plugins für die neueste Minecraft Version zu
-> installieren. Sie enthält direkt das entsprechende JRE, weshalb man das
+> erstellen. Sie enthält direkt das entsprechende JRE, weshalb man das
 > Runtime Environment nicht extra herunterladen muss.
 
 <!-- Back to top Button -->
@@ -94,7 +90,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 ## Download Paper <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
 ### Vorher
-&nbsp;&nbsp;&nbsp;&nbsp;Ordner erstellen in dem die heruntergeladene Server &Datei abgelegt werden kann.  
+&nbsp;&nbsp;&nbsp;&nbsp;Ordner erstellen in dem die heruntergeladene Server Datei abgelegt werden kann.  
 &nbsp;&nbsp;&nbsp;&nbsp;Zum Beispiel:  
 &nbsp;&nbsp;&nbsp;&nbsp;`C:\Users\Max\1.21.8 - Server`
 
@@ -123,12 +119,12 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
     Wenn es keinen Fehler gibt ist Java installiert.
 
 ### Server Start Datei erstellen
-  1. Erstellen einer `start.bat` Datei im Server Verzeichnis  
+  1. Erstelle eine `start.bat` Datei im Server Verzeichnis  
   2. Inhalt der `start.bat`:  
      ```bat
-     java -jar paper-1.21.8-60.jar --nogui
+     java -jar paper-<version>.jar --nogui
      ```
-     Der Name der Datei (In diesem Fall: `paper-1.21.8-60.jar`) kann varieren.
+     Der Name der Datei ist in diesem Fall `paper-1.21.8-60.jar`.
 
 ### Starten des Server
   1. `start.bat` Datei doppelt anklicken
@@ -157,15 +153,15 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 # IntelliJ einrichten <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="40px" align="center"/>
 
 ### IntelliJ fertig installieren
-  1. Falls noch nicht geschehen, IntelliJ installer doppel anklicken
-  2. Installer Wizard durchlaufen
+  1. Falls noch nicht geschehen, IntelliJ installer doppelt anklicken
+  2. Installer durchlaufen
 
 ### Installieren des Minecraft Developer Plugins
-  1. Wenn IntelliJ geöffnet ist sollte man ein Fenster sehen in dem man ein neues Projekt erstellen kann
+  1. Wenn man IntelliJ öffnet, sollte man ein Fenster sehen in dem man ein neues Projekt erstellen kann
   2. In diesem Fenster **links** auf den Plugins Button drücken
-  3. Nach dem Plugin `Minecraft Development` suchen
+  3. Im Plugin Menü nach dem Plugin `Minecraft Development` suchen
   4. Auf installieren klicken
-  5. Auf IDE neustarten klicken wenn man dazu aufgefordert wird
+  5. IDE neustarten wenn man dazu aufgefordert wird
 
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
@@ -187,11 +183,14 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
     2. Location angeben. Kann frei gewählt werden. **Nicht** der Server Ordner.
     3. Als Group `Plugin` auswählen
     4. Als Template `Paper` auswählen
-    5. Als Build System `Gradle auswählen`
+    5. Als Build System `Gradle` auswählen
     6. Als Language `Java` auswählen
-    7. Als Minecraft Version die Version des installierten Papaer Servers. In diesem Fall `1.21.8`.
-    8. Main Class zu **[domain]**.**[namespace]**.**`Main`** ändern
+    7. Als Minecraft Version die Version des installierten Paper Servers (in diesem Fall `1.21.8`) auswählen
+    8. Main Class zu **[domain]**.**[package]**.**`Main`** ändern
     9. Create klicken und abwarten
+
+> **Note:**  
+> Domain kann z.B. `com.max` sein. Das Package ist im normalfall der Name des Projekts.
 
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
@@ -205,7 +204,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 ### Output Ordner der Build Datei festlegen 📂
 1. `build.gradle` Datei öffnen
-2. Diesen Code Teil ans Ende der Datei anhängen:
+2. Diesen Code ans Ende der Datei anhängen:
     ```
     tasks.jar {
         destinationDirectory = file("Path/To/Server")
