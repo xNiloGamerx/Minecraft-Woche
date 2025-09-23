@@ -15,7 +15,7 @@
 
 3. [IntelliJ einrichten](#intellij-einrichten-) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
 
-4. [Erstellen eines ersten Plugins 🛠️](#erstellen-eines-ersten-plugins-)
+4. [Erstellen eines ersten Plugins 🛠️](#erstellen-eines-ersten-plugins-%EF%B8%8F)
 
 5. [Zusatz ➕](#zusatz-)
     1. [Output Ordner der Build Datei festlegen 📂](#output-ordner-der-build-datei-festlegen-)
