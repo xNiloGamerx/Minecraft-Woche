@@ -17,6 +17,8 @@
 
 4. [Erstellen eines ersten Plugins](#erstellen-eines-ersten-plugins)
 
+5. [Zusatz](#zusatz)
+
 <br>
 <br>
 
@@ -147,7 +149,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 # IntelliJ einrichten <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="40px" align="center"/>
 
-### IntelliJ ferig installieren
+### IntelliJ fertig installieren
   1. Falls noch nicht geschehen, IntelliJ installer doppel anklicken
   2. Installer Wizard durchlaufen
 
@@ -184,6 +186,16 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
     8. Main Class zu **[domain]**.**[namespace]**.**`Main`** ändern
     9. Create klicken und abwarten
 
+<!-- Back to top Button -->
+<p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
+
+<!-- ↑ Erstellen eines ersten Plugins -->
+
+
+<!-- ↓ Zusatz ↓ -->
+
+# Zusatz
+
 ### Output Ordner der Build Datei ändern
 1. `build.gradle` Datei öffnen
 2. Diesen Code Teil ans Ende der Datei anhängen:
@@ -199,4 +211,4 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
 
-<!-- ↑ Erstellen eines ersten Plugins -->
+<!-- ↑ Zusatz -->
