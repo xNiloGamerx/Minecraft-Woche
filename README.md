@@ -2,7 +2,7 @@
 
 <!-- Structure -->
 ### Structure
-1. [Software herunterladen](#software-herunterladen)
+1. [Software herunterladen 💾](#software-herunterladen-)
     1. [Download Minecraft](#download-minecraft-) <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/12/Grass_Block_JE2.png/revision/latest?cb=20200830142618" width="25px" align="center"/>
 
     2. [Download Java](#download-java-) <img src="https://cdn.freebiesupply.com/logos/large/2x/java-14-logo-png-transparent.png" width="25px" height="30px" align="center"/>
@@ -15,15 +15,15 @@
 
 3. [IntelliJ einrichten](#intellij-einrichten-) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
 
-4. [Erstellen eines ersten Plugins](#erstellen-eines-ersten-plugins)
+4. [Erstellen eines ersten Plugins 🛠️](#erstellen-eines-ersten-plugins-)
 
 5. [Zusatz ➕](#zusatz-)
-    1. [Output Ordner der Build Datei festlegen](#output-ordner-der-build-datei-festlegen)
+    1. [Output Ordner der Build Datei festlegen 📂](#output-ordner-der-build-datei-festlegen-)
 
 <br>
 <br>
 
-# Software herunterladen
+# Software herunterladen 💾
 
 <!-- ↓ Download Minecraft ↓ -->
 
@@ -171,7 +171,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 <!-- ↓ Erstellen eines ersten Plugins ↓ -->
 
-# Erstellen eines ersten Plugins
+# Erstellen eines ersten Plugins 🛠️
 
 ### Neues Projekt erstellen
 1. Im kleinen IntelliJ Fenster auf `Neues Projekt` klicken
@@ -197,7 +197,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 # Zusatz ➕
 
-### Output Ordner der Build Datei festlegen
+### Output Ordner der Build Datei festlegen 📂
 1. `build.gradle` Datei öffnen
 2. Diesen Code Teil ans Ende der Datei anhängen:
     ```
