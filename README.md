@@ -13,7 +13,7 @@
 
 2. [Paper Server einrichten](#paper-server-einrichten-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
-3. [IntelliJ einrichten](#intellij-einrichten) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
+3. [IntelliJ einrichten](#intellij-einrichten-) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
 
 4. [Erstellen eines ersten Plugins](#erstellen-eines-ersten-plugins)
 
@@ -26,7 +26,7 @@
 
 ## Download Minecraft <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/12/Grass_Block_JE2.png/revision/latest?cb=20200830142618" width="40px" align="center"/>
 
-Minecraft das Computerspiel für welches wir Plugins erstellen wollen.
+Minecraft ist das Computerspiel für welches wir Plugins erstellen wollen.
 
 ### Website
 &nbsp;&nbsp;&nbsp;&nbsp;[Minecraft Download Page](https://www.minecraft.net/de-de/download)
