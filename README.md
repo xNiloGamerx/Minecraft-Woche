@@ -17,7 +17,7 @@
 
 4. [Erstellen eines ersten Plugins](#erstellen-eines-ersten-plugins)
 
-5. [Zusatz](#zusatz)
+5. [Zusatz ➕](#zusatz)
     1. [Output Ordner der Build Datei festlegen](#output-ordner-der-build-datei-festlegen)
 
 <br>
@@ -195,7 +195,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 <!-- ↓ Zusatz ↓ -->
 
-# Zusatz
+# Zusatz ➕
 
 ### Output Ordner der Build Datei festlegen
 1. `build.gradle` Datei öffnen
