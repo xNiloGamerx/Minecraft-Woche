@@ -13,6 +13,9 @@
 
 2. [Paper Server einrichten](#paper-server-einrichten-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
+3. [IntelliJ einrichten](#intellij-einrichten) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
+
+4. [Erstellen eines ersten Plugins](#erstellen-eines-ersten-plugins)
 
 <br>
 <br>
@@ -101,7 +104,6 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <br>
 <br>
 
-
 <!-- ↓ Paper Server einrichten ↓ -->
 
 # Paper Server einrichten <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="40px" align="center"/>
@@ -137,3 +139,64 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
 
 <!-- ↑ Paper Server einrichten ↑ -->
+
+<br>
+<br>
+
+<!-- ↓ IntelliJ einrichten ↓ -->
+
+# IntelliJ einrichten <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="40px" align="center"/>
+
+### IntelliJ ferig installieren
+  1. Falls noch nicht geschehen, IntelliJ installer doppel anklicken
+  2. Installer Wizard durchlaufen
+
+### Installieren des Minecraft Developer Plugins
+  1. Wenn IntelliJ geöffnet ist sollte man ein Fenster sehen in dem man ein neues Projekt erstellen kann
+  2. In diesem Fenster **links** auf den Plugins Button drücken
+  3. Nach dem Plugin `Minecraft Development` suchen
+  4. Auf installieren klicken
+  5. Auf IDE neustarten klicken wenn man dazu aufgefordert wird
+
+<!-- Back to top Button -->
+<p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
+
+<!-- ↑ IntelliJ einrichten ↑ -->
+
+<br>
+<br>
+
+<!-- ↓ Erstellen eines ersten Plugins ↓ -->
+
+# Erstellen eines ersten Plugins
+
+### Neues Projekt erstellen
+1. Im kleinen IntelliJ Fenster auf `Neues Projekt` klicken
+2. Auf der **linken** Seite auf Minecraft klicken um ein Minecraft Projekt zu   erstellen
+3. Daten des neuen Projekts angeben
+    1. Name des neuen Projekts angeben, z.B. `MyFirstPlugin`
+    2. Location angeben. Kann frei gewählt werden. **Nicht** der Server Ordner.
+    3. Als Group `Plugin` auswählen
+    4. Als Template `Paper` auswählen
+    5. Als Build System `Gradle auswählen`
+    6. Als Language `Java` auswählen
+    7. Als Minecraft Version die Version des installierten Papaer Servers. In diesem Fall `1.21.8`.
+    8. Main Class zu **[domain]**.**[namespace]**.**`Main`** ändern
+    9. Create klicken und abwarten
+
+### Output Ordner der Build Datei ändern
+1. `build.gradle` Datei öffnen
+2. Diesen Code Teil ans Ende der Datei anhängen:
+    ```
+    tasks.jar {
+        destinationDirectory = file("Path/To/Server")
+    }
+    ```
+3. `Path/To/Server` mit dem Pfad zum Server Plugins Ordner austauschen.  
+   Zum Beipspiel:  
+   `C:\Users\Max\1.21.8 - Server\plugins`
+
+<!-- Back to top Button -->
+<p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
+
+<!-- ↑ Erstellen eines ersten Plugins -->
