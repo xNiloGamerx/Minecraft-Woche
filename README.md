@@ -91,7 +91,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 <!-- ↓ Download Paper ↓ -->
 
-## Download Paper <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
+## Download Paper <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="40px" align="center"/>
 
 ### Vorher
 &nbsp;&nbsp;&nbsp;&nbsp;Ordner erstellen in dem die heruntergeladene Server Datei abgelegt werden kann.  
