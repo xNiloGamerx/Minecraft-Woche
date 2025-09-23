@@ -53,3 +53,7 @@ processResources {
         expand props
     }
 }
+
+tasks.jar {
+    destinationDirectory = file("C:/Users/Niklas/Documents/009_MinecraftPlugins/1.21.8 - Server/plugins")
+}
