@@ -1,4 +1,4 @@
-![Tag 1 - Montag](./gifs/Tag_1.gif)
+<img src="./gifs/Tag_1.gif"/>
 
 # Setup Guide
 
