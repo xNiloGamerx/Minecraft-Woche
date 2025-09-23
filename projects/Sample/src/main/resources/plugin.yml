@@ -1,0 +1,4 @@
+name: Sample
+version: '1.0-SNAPSHOT'
+main: com.nik.sample.Sample
+api-version: '1.21'
