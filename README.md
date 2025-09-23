@@ -126,9 +126,9 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
   1. Erstelle eine `start.bat` Datei im Server Verzeichnis  
   2. Inhalt der `start.bat`:  
      ```bat
-     java -jar paper-<version>.jar --nogui
+     java -jar paper-1.21.8-60.jar --nogui
      ```
-     Der Name der Datei ist in diesem Fall `paper-1.21.8-60.jar`.
+     Der Name der Datei kann variieren: `paper-<version>.jar`.
 
 ### Starten des Server
   1. `start.bat` Datei doppelt anklicken
