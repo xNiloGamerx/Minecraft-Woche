@@ -17,7 +17,7 @@
 
 4. [Erstellen eines ersten Plugins](#erstellen-eines-ersten-plugins)
 
-5. [Zusatz ➕](#zusatz)
+5. [Zusatz ➕](#zusatz-)
     1. [Output Ordner der Build Datei festlegen](#output-ordner-der-build-datei-festlegen)
 
 <br>
