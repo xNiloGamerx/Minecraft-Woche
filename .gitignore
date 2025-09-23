@@ -1,0 +1,40 @@
+# =============================
+# IntelliJ IDEA
+# =============================
+.idea/
+*.iml
+*.iws
+out/
+
+# =============================
+# Gradle
+# =============================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# =============================
+# Java
+# =============================
+*.class
+*.jar
+*.war
+*.ear
+
+# =============================
+# Minecraft plugin / Bukkit / Spigot
+# =============================
+logs/
+plugins/*.jar
+*.log
+*.tmp
+
+# =============================
+# OS-specific
+# =============================
+# Windows
+Thumbs.db
+.DS_Store
+
+# macOS
+.DS_Store
