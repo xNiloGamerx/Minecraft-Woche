@@ -11,7 +11,7 @@
 
     4. [Download Paper](#download-paper-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
-2. [Paper Server einrichten](#paper-server-einrichten) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
+2. [Paper Server einrichten](#paper-server-einrichten-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
 
 <br>
@@ -107,9 +107,31 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 # Paper Server einrichten <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="40px" align="center"/>
 
 ### Prüfen ob Java installiert ist
-- Command (in CMD ausführen):  
-  `java -version`  
-  Wenn es keinen Fehler gibt ist Java installiert.
+  - Command (in CMD ausführen):  
+    `java -version`  
+    Wenn es keinen Fehler gibt ist Java installiert.
+
+### Server Start Datei erstellen
+  1. Erstellen einer `start.bat` Datei im Server Verzeichnis  
+  2. Inhalt der `start.bat`:  
+     ```bat
+     java -jar paper-1.21.8-60.jar --nogui
+     ```
+     Der Name der Datei (In diesem Fall: `paper-1.21.8-60.jar`) kann varieren.
+
+### Starten des Server
+  1. `start.bat` Datei doppelt anklicken
+  2. Beim ersten Start des Servers tritt ein Fehler auf
+     ```
+     You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
+     ```
+  3. CMD-Fenster schließen
+  4. `eula.txt` Datei im Server Verzeichnis öffnen
+  5. `eula=false` auf `eula=true` setzen
+  6. Erneut die `start.bat` Datei doppelt anklicken
+  
+> **Note:**  
+> Der Server staret nun ohne GUI. Um den Server mit GUI zu starten, muss lediglich in der `start.bat` Datei der zusatz `--nogui` vom Startbefehl entfernt werden.
 
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
