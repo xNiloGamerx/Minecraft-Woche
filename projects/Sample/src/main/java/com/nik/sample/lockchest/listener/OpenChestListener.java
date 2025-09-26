@@ -36,67 +36,70 @@ public class OpenChestListener implements Listener {
         LockChestManager lockChestManager = Main.getInstance().getLockChestManager();
         Lockchest lockchest = lockChestManager.getLockchest(chestLocation);
 
-        if (lockchest != null && lockchest.isLocked() && !(inConversation.contains(player.getUniqueId()))) {
-            ConversationFactory factory = new ConversationFactory(plugin);
-            Conversation convo = factory.withEscapeSequence("exit").withTimeout(30).thatExcludesNonPlayersWithMessage("")
-                    .withFirstPrompt(new StringPrompt() {
-                        @Override
-                        public @NotNull String getPromptText(ConversationContext context) {
-                            Bukkit.getScheduler().runTask(plugin, () -> {
-                                player.sendMessage(Main.getInstance().getPrefix()
-                                        .append(
-                                                Component.text("Enter password: ")
-                                                        .color(Main.getInstance().getNormalTextColor())
-                                                        .append(
-                                                                Component.text("(Expires in 30 seconds)")
-                                                                        .color(Main.getInstance().getCommentTextColor())
-                                                        )));
-                            });
-                            return "";
-                        }
+        if (lockchest != null && lockchest.isLocked()) {
+            if (!(inConversation.contains(player.getUniqueId()))) {
+                event.setCancelled(true);
 
-                        @Override
-                        public Prompt acceptInput(ConversationContext context, String passwordInput) {
-                            String passwordHash = HashUtils.sha256Base64(passwordInput);
-                            boolean unlocked = lockChestManager.isRightPassword(chestLocation, passwordHash);
-
-                            if (unlocked) {
+                ConversationFactory factory = new ConversationFactory(plugin);
+                Conversation convo = factory.withEscapeSequence("exit").withTimeout(10).thatExcludesNonPlayersWithMessage("")
+                        .withFirstPrompt(new StringPrompt() {
+                            @Override
+                            public @NotNull String getPromptText(ConversationContext context) {
                                 Bukkit.getScheduler().runTask(plugin, () -> {
-                                    player.openInventory(inventory);
-
-                                    player.sendMessage(
-                                            Main.getInstance().getPrefix()
-                                                    .append(
-                                                            Component.text("Unlocked Chest only for you and only this time!")
-                                                                    .color(
-                                                                            Main.getInstance().getSuccessColor()
-                                                                    )));
-
-                                    inConversation.remove(player.getUniqueId());
+                                    player.sendMessage(Main.getInstance().getPrefix()
+                                            .append(
+                                                    Component.text("Enter password: ")
+                                                            .color(Main.getInstance().getNormalTextColor())
+                                                            .append(
+                                                                    Component.text("(Expires in 10 seconds)")
+                                                                            .color(Main.getInstance().getCommentTextColor())
+                                                            )));
                                 });
-                            } else {
-                                Bukkit.getScheduler().runTask(plugin, () -> {
-                                    player.sendMessage(
-                                            Main.getInstance().getPrefix()
-                                                    .append(
-                                                            Component.text("Wrong password!")
-                                                                    .color(
-                                                                            Main.getInstance().getErrorColor()
-                                                                    )));
-                                    inConversation.remove(player.getUniqueId());
-                                });
+                                return "";
                             }
 
-                            return Prompt.END_OF_CONVERSATION;
-                        }
-                    })
-                    .buildConversation(player);
+                            @Override
+                            public Prompt acceptInput(ConversationContext context, String passwordInput) {
+                                String passwordHash = HashUtils.sha256Base64(passwordInput);
+                                boolean unlocked = lockChestManager.isRightPassword(chestLocation, passwordHash);
 
-            inConversation.add(player.getUniqueId());
-            convo.begin();
+                                if (unlocked) {
+                                    inConversation.add(player.getUniqueId());
 
-            player.sendMessage("Chest is locked by " + lockchest.getCreator().getName());
-            event.setCancelled(true);
+                                    Bukkit.getScheduler().runTask(plugin, () -> {
+                                        player.openInventory(inventory);
+
+                                        player.sendMessage(
+                                                Main.getInstance().getPrefix()
+                                                        .append(
+                                                                Component.text("Unlocked Chest only for you and only this time!")
+                                                                        .color(
+                                                                                Main.getInstance().getSuccessColor()
+                                                                        )));
+
+                                        inConversation.remove(player.getUniqueId());
+                                    });
+                                } else {
+                                    Bukkit.getScheduler().runTask(plugin, () -> {
+                                        player.sendMessage(
+                                                Main.getInstance().getPrefix()
+                                                        .append(
+                                                                Component.text("Wrong password!")
+                                                                        .color(
+                                                                                Main.getInstance().getErrorColor()
+                                                                        )));
+
+                                        event.setCancelled(true);
+                                    });
+                                }
+
+                                return Prompt.END_OF_CONVERSATION;
+                            }
+                        })
+                        .buildConversation(player);
+
+                convo.begin();
+            }
         }
     }
 

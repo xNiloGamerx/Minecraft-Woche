@@ -2,6 +2,7 @@ package com.nik.sample;
 
 import com.nik.sample.commands.InvCommand;
 import com.nik.sample.commands.hat.HatCommand;
+import com.nik.sample.config.Config;
 import com.nik.sample.lockchest.LockChestManager;
 import com.nik.sample.lockchest.commands.LockCommand;
 import com.nik.sample.lockchest.commands.UnlockCommand;
@@ -16,6 +17,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Main extends JavaPlugin {
 
     private static Main instance;
+    private Config config;
     private Component prefix;
     TextColor normalTextColor;
     TextColor commentTextColor;
@@ -26,15 +28,19 @@ public final class Main extends JavaPlugin {
     private LockChestManager lockChestManager;
 
     @Override
-    public void onEnable() {
-        // Plugin startup logic
+    public void onLoad() {
         instance = this;
+        config = new Config();
         prefix = mm.deserialize("<gradient:#FF5F6D:#FFC371>[Sample]</gradient>" + " ");
         normalTextColor = TextColor.color(255, 245, 225);
         commentTextColor = TextColor.color(122, 90, 77);
         successColor = TextColor.color(107, 164, 94);
         errorColor = TextColor.color(224, 78, 57);
+    }
 
+    @Override
+    public void onEnable() {
+        // Plugin startup logic
         PluginManager pluginManager = this.getServer().getPluginManager();
 
         InvCommand invCommand = new InvCommand();
@@ -50,15 +56,22 @@ public final class Main extends JavaPlugin {
         this.getCommand("unlock").setExecutor(new UnlockCommand());
         pluginManager.registerEvents(new OpenChestListener(), this);
         pluginManager.registerEvents(new BreakBlockListener(), this);
+        this.lockChestManager.loadChests();
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        this.lockChestManager.saveChests();
+        config.save();
     }
 
     public static Main getInstance() {
         return instance;
+    }
+
+    public Config getConfiguration() {
+        return config;
     }
 
     public MiniMessage getMiniMessage() {

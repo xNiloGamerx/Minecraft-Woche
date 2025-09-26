@@ -29,6 +29,10 @@ public class Lockchest {
         return location;
     }
 
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
     public boolean isLocked() {
         return locked;
     }

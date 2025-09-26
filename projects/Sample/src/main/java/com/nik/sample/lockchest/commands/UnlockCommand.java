@@ -38,7 +38,7 @@ public class UnlockCommand implements CommandExecutor {
             player.sendMessage(
                     Main.getInstance().getPrefix()
                             .append(
-                                    Component.text("Chest is not long!")
+                                    Component.text("Chest is not locked!")
                                             .color(
                                                     Main.getInstance().getErrorColor()
                                             )));
