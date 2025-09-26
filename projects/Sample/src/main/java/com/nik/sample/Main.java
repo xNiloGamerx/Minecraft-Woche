@@ -2,6 +2,8 @@ package com.nik.sample;
 
 import com.nik.sample.commands.InvCommand;
 import com.nik.sample.commands.hat.HatCommand;
+import com.nik.sample.lockchest.commands.LockCommand;
+import com.nik.sample.lockchest.commands.UnlockCommand;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.plugin.PluginManager;
@@ -25,7 +27,12 @@ public final class Main extends JavaPlugin {
         this.getCommand("inv").setExecutor(invCommand);
         pluginManager.registerEvents(invCommand, this);
 
+        // Hat
         this.getCommand("hat").setExecutor(new HatCommand());
+
+        // Lock Chest
+        this.getCommand("lock").setExecutor(new LockCommand());
+        this.getCommand("unlock").setExecutor(new UnlockCommand());
     }
 
     @Override
