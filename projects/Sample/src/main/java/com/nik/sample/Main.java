@@ -1,6 +1,7 @@
 package com.nik.sample;
 
 import com.nik.sample.commands.InvCommand;
+import com.nik.sample.commands.hat.HatCommand;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.plugin.PluginManager;
@@ -23,6 +24,8 @@ public final class Main extends JavaPlugin {
         InvCommand invCommand = new InvCommand();
         this.getCommand("inv").setExecutor(invCommand);
         pluginManager.registerEvents(invCommand, this);
+
+        this.getCommand("hat").setExecutor(new HatCommand());
     }
 
     @Override
