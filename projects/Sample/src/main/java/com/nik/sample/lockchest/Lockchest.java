@@ -1,22 +1,28 @@
 package com.nik.sample.lockchest;
 
-import javax.xml.stream.Location;
+import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
+
 
 public class Lockchest {
     private final Location location;
     private final String passwordHash;
     private boolean locked;
+    private Player creator;
 
-    Lockchest(Location location, String passwordHash) {
+    public Lockchest(Location location, String passwordHash, Player creator) {
         this.location = location;
         this.passwordHash = passwordHash;
         this.locked = true;
+        this.creator = creator;
     }
 
-    Lockchest(Location location, String passwordHash, boolean locked) {
+    public Lockchest(Location location, String passwordHash, boolean locked, Player creator) {
         this.location = location;
         this.passwordHash = passwordHash;
         this.locked = locked;
+        this.creator = creator;
     }
 
     public Location getLocation() {
@@ -37,5 +43,13 @@ public class Lockchest {
 
     public boolean updatePassword(String oldHash, String newHash) {
         return false;
+    }
+
+    public boolean isRightHash(String hash) {
+        return hash.equals(this.passwordHash);
+    }
+
+    public Player getCreator() {
+        return creator;
     }
 }
