@@ -2,7 +2,16 @@ package com.nik.sample;
 
 import com.nik.sample.commands.InvCommand;
 import com.nik.sample.commands.hat.HatCommand;
+import com.nik.sample.config.Config;
+import com.nik.sample.lockchest.LockChestManager;
+import com.nik.sample.lockchest.commands.LockCommand;
+import com.nik.sample.lockchest.commands.SaveConfigCommand;
+import com.nik.sample.lockchest.commands.UnlockCommand;
+import com.nik.sample.lockchest.listener.BreakBlockListener;
+import com.nik.sample.lockchest.listener.EntityExplodeEvent;
+import com.nik.sample.lockchest.listener.OpenChestListener;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -10,31 +19,63 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Main extends JavaPlugin {
 
     private static Main instance;
+    private Config config;
     private Component prefix;
+    TextColor normalTextColor;
+    TextColor commentTextColor;
+    TextColor successColor;
+    TextColor errorColor;
     private MiniMessage mm = MiniMessage.miniMessage();
+
+    private LockChestManager lockChestManager;
+
+    @Override
+    public void onLoad() {
+        instance = this;
+        config = new Config();
+        prefix = mm.deserialize("<gradient:#FF5F6D:#FFC371>[Sample]</gradient>" + " ");
+        normalTextColor = TextColor.color(255, 245, 225);
+        commentTextColor = TextColor.color(122, 90, 77);
+        successColor = TextColor.color(107, 164, 94);
+        errorColor = TextColor.color(224, 78, 57);
+    }
 
     @Override
     public void onEnable() {
         // Plugin startup logic
-        instance = this;
-        prefix = mm.deserialize("<gradient:#1d7001:#258f01:#52c234>[Sample]</gradient>" + " ");
-
         PluginManager pluginManager = this.getServer().getPluginManager();
 
         InvCommand invCommand = new InvCommand();
         this.getCommand("inv").setExecutor(invCommand);
         pluginManager.registerEvents(invCommand, this);
 
+        // Hat
         this.getCommand("hat").setExecutor(new HatCommand());
+
+        // Lock Chest
+        lockChestManager = new LockChestManager();
+        this.getCommand("lock").setExecutor(new LockCommand());
+        this.getCommand("unlock").setExecutor(new UnlockCommand());
+        this.getCommand("saveconf").setExecutor(new SaveConfigCommand());
+        pluginManager.registerEvents(new OpenChestListener(), this);
+        pluginManager.registerEvents(new BreakBlockListener(), this);
+        pluginManager.registerEvents(new EntityExplodeEvent(), this);
+        this.lockChestManager.loadChests();
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        this.lockChestManager.saveChests();
+        config.save();
     }
 
     public static Main getInstance() {
         return instance;
+    }
+
+    public Config getConfiguration() {
+        return config;
     }
 
     public MiniMessage getMiniMessage() {
@@ -43,5 +84,25 @@ public final class Main extends JavaPlugin {
 
     public Component getPrefix() {
         return prefix;
+    }
+
+    public TextColor getNormalTextColor() {
+        return normalTextColor;
+    }
+
+    public TextColor getCommentTextColor() {
+        return commentTextColor;
+    }
+
+    public TextColor getSuccessColor() {
+        return successColor;
+    }
+
+    public TextColor getErrorColor() {
+        return errorColor;
+    }
+
+    public LockChestManager getLockChestManager() {
+        return lockChestManager;
     }
 }

@@ -7,3 +7,10 @@ commands:
     description: Get Inventory of specified player
   hat:
     description: Equip your current item as a hat
+
+  lock:
+    description: Lock a chest with a password
+  unlock:
+    description: Unlock a locked chest with a password
+  saveconf:
+    description: Save the configuration
