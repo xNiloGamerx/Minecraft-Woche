@@ -23,6 +23,7 @@ import java.util.UUID;
 
 public class OpenChestListener implements Listener {
     private final Set<UUID> inConversation = new HashSet<>();
+    private final Set<UUID> unlockedChest = new HashSet<>();
 
     @EventHandler(ignoreCancelled = true)
     public void onInventoryOpen(InventoryOpenEvent event) {
@@ -38,7 +39,7 @@ public class OpenChestListener implements Listener {
 
         if (lockchest != null && lockchest.isLocked()) {
             if (!(inConversation.contains(player.getUniqueId()))) {
-                event.setCancelled(true);
+                inConversation.add(player.getUniqueId());
 
                 ConversationFactory factory = new ConversationFactory(plugin);
                 Conversation convo = factory.withEscapeSequence("exit").withTimeout(10).thatExcludesNonPlayersWithMessage("")
@@ -64,11 +65,7 @@ public class OpenChestListener implements Listener {
                                 boolean unlocked = lockChestManager.isRightPassword(chestLocation, passwordHash);
 
                                 if (unlocked) {
-                                    inConversation.add(player.getUniqueId());
-
                                     Bukkit.getScheduler().runTask(plugin, () -> {
-                                        player.openInventory(inventory);
-
                                         player.sendMessage(
                                                 Main.getInstance().getPrefix()
                                                         .append(
@@ -76,9 +73,10 @@ public class OpenChestListener implements Listener {
                                                                         .color(
                                                                                 Main.getInstance().getSuccessColor()
                                                                         )));
-
-                                        inConversation.remove(player.getUniqueId());
                                     });
+
+                                    unlockedChest.add(player.getUniqueId());
+                                    player.openInventory(inventory);
                                 } else {
                                     Bukkit.getScheduler().runTask(plugin, () -> {
                                         player.sendMessage(
@@ -88,11 +86,10 @@ public class OpenChestListener implements Listener {
                                                                         .color(
                                                                                 Main.getInstance().getErrorColor()
                                                                         )));
-
-                                        event.setCancelled(true);
                                     });
                                 }
 
+                                inConversation.remove(player.getUniqueId());
                                 return Prompt.END_OF_CONVERSATION;
                             }
                         })
@@ -100,6 +97,11 @@ public class OpenChestListener implements Listener {
 
                 convo.begin();
             }
+
+            if (!(unlockedChest.contains(player.getUniqueId()))) {
+                event.setCancelled(true);
+            }
+            unlockedChest.remove(player.getUniqueId());
         }
     }
 

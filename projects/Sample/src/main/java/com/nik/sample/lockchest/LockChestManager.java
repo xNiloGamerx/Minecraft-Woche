@@ -43,28 +43,31 @@ public class LockChestManager {
     public void saveChests() {
         FileConfiguration config = Main.getInstance().getConfiguration().getConfig();
 
-        List<String> locations = new ArrayList<>();
+        List<Integer> ids = new ArrayList<>();
+        int currentId = 0;
         for (Location location : lockchests.keySet()) {
-            locations.add(generateLocationString(location));
-            config.set("lockchest.lockchests." + generateLocationString(location) + ".passwordHash", lockchests.get(location).getPasswordHash());
-            config.set("lockchest.lockchests." + generateLocationString(location) + ".isLocked", lockchests.get(location).isLocked());
-            config.set("lockchest.lockchests." + generateLocationString(location) + ".creatorUuid", lockchests.get(location).getCreator().getUniqueId().toString());
+            ids.add(currentId);
+            config.set("lockchest.lockchests." + currentId + ".location", generateLocationString(location));
+            config.set("lockchest.lockchests." + currentId + ".passwordHash", lockchests.get(location).getPasswordHash());
+            config.set("lockchest.lockchests." + currentId + ".isLocked", lockchests.get(location).isLocked());
+            config.set("lockchest.lockchests." + currentId + ".creatorUuid", lockchests.get(location).getCreatorUuid().toString());
+            currentId++;
         }
-        config.set("lockchest.locations", locations);
+        config.set("lockchest.ids", ids);
     }
 
     public void loadChests() {
         FileConfiguration config = Main.getInstance().getConfiguration().getConfig();
 
-        List<String> locationStrings = config.getStringList("lockchest.locations");
-        for (String locationString : locationStrings) {
-            Location location = generateLocationFromString(locationString);
-            String passwordHash = config.getString("lockchest.lockchests." + locationString + ".passwordHash");
-            boolean isLocked = config.getBoolean("lockchest.lockchests." + locationString + ".isLocked");
-            String playerUUID = config.getString("lockchest.lockchests." + locationString + ".creatorUuid");
+        List<Integer> ids = config.getIntegerList("lockchest.ids");
+        for (int id : ids) {
+            Location location =  generateLocationFromString(config.getString("lockchest.lockchests." + id + ".location"));
+            String passwordHash = config.getString("lockchest.lockchests." + id + ".passwordHash");
+            boolean isLocked = config.getBoolean("lockchest.lockchests." + id + ".isLocked");
+            String playerUUID = config.getString("lockchest.lockchests." + id + ".creatorUuid");
 
-            Player player = Bukkit.getPlayer(UUID.fromString(playerUUID));
-            lockchests.put(location, new Lockchest(location, passwordHash, isLocked, player));
+            assert playerUUID != null;
+            lockchests.put(location, new Lockchest(location, passwordHash, isLocked, UUID.fromString(playerUUID)));
         }
     }
 
@@ -76,12 +79,12 @@ public class LockChestManager {
         return lockchest.isLocked();
     }
 
-    public void addLockChest(Location location, String passwordHash, Player creator) {
-        lockchests.put(location, new Lockchest(location, passwordHash, creator));
+    public void addLockChest(Location location, String passwordHash, UUID creatorUuid) {
+        lockchests.put(location, new Lockchest(location, passwordHash, creatorUuid));
     }
 
-    public void addLockChest(Location location, String passwordHash, boolean locked, Player creator) {
-        lockchests.put(location, new Lockchest(location, passwordHash, locked, creator));
+    public void addLockChest(Location location, String passwordHash, boolean locked, UUID creatorUuid) {
+        lockchests.put(location, new Lockchest(location, passwordHash, locked, creatorUuid));
     }
 
     public Lockchest getLockchest(Location location) {
@@ -96,9 +99,7 @@ public class LockChestManager {
     public boolean unlockChest(Location location, String passwordHash) {
         if (isRightPassword(location, passwordHash)) {
             FileConfiguration config = Main.getInstance().getConfiguration().getConfig();
-            // Config geht nicht richtig
             config.set("lockchest.lockchests", null);
-
             lockchests.remove(location);
 
             return true;

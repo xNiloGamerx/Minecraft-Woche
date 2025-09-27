@@ -47,7 +47,7 @@ public class LockCommand implements CommandExecutor {
 
         String passwordHash = HashUtils.sha256Base64(args[0]);
 
-        lockChestManager.addLockChest(location, passwordHash, player);
+        lockChestManager.addLockChest(location, passwordHash, player.getUniqueId());
 
         player.sendMessage(
                 Main.getInstance().getPrefix()

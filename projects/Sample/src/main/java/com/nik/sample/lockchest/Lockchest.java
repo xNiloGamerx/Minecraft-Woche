@@ -1,28 +1,31 @@
 package com.nik.sample.lockchest;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+
+import java.util.UUID;
 
 
 public class Lockchest {
     private final Location location;
     private final String passwordHash;
     private boolean locked;
-    private Player creator;
+    private final UUID creatorUuid;
 
-    public Lockchest(Location location, String passwordHash, Player creator) {
+    public Lockchest(Location location, String passwordHash, UUID creatorUuid) {
         this.location = location;
         this.passwordHash = passwordHash;
         this.locked = true;
-        this.creator = creator;
+        this.creatorUuid = creatorUuid;
     }
 
-    public Lockchest(Location location, String passwordHash, boolean locked, Player creator) {
+    public Lockchest(Location location, String passwordHash, boolean locked, UUID creatorUuid) {
         this.location = location;
         this.passwordHash = passwordHash;
         this.locked = locked;
-        this.creator = creator;
+        this.creatorUuid = creatorUuid;
     }
 
     public Location getLocation() {
@@ -37,14 +40,6 @@ public class Lockchest {
         return locked;
     }
 
-    public boolean lock(String inputHash) {
-        return false;
-    }
-
-    public boolean unlock(String inputHash) {
-        return false;
-    }
-
     public boolean updatePassword(String oldHash, String newHash) {
         return false;
     }
@@ -53,7 +48,11 @@ public class Lockchest {
         return hash.equals(this.passwordHash);
     }
 
+    public UUID getCreatorUuid() {
+        return creatorUuid;
+    }
+
     public Player getCreator() {
-        return creator;
+        return Bukkit.getPlayer(creatorUuid);
     }
 }

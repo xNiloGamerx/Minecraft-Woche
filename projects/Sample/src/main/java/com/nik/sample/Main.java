@@ -5,8 +5,10 @@ import com.nik.sample.commands.hat.HatCommand;
 import com.nik.sample.config.Config;
 import com.nik.sample.lockchest.LockChestManager;
 import com.nik.sample.lockchest.commands.LockCommand;
+import com.nik.sample.lockchest.commands.SaveConfigCommand;
 import com.nik.sample.lockchest.commands.UnlockCommand;
 import com.nik.sample.lockchest.listener.BreakBlockListener;
+import com.nik.sample.lockchest.listener.EntityExplodeEvent;
 import com.nik.sample.lockchest.listener.OpenChestListener;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
@@ -54,8 +56,10 @@ public final class Main extends JavaPlugin {
         lockChestManager = new LockChestManager();
         this.getCommand("lock").setExecutor(new LockCommand());
         this.getCommand("unlock").setExecutor(new UnlockCommand());
+        this.getCommand("saveconf").setExecutor(new SaveConfigCommand());
         pluginManager.registerEvents(new OpenChestListener(), this);
         pluginManager.registerEvents(new BreakBlockListener(), this);
+        pluginManager.registerEvents(new EntityExplodeEvent(), this);
         this.lockChestManager.loadChests();
     }
 
