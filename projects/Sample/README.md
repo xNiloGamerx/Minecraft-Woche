@@ -85,11 +85,12 @@ Kisten sperren per command.
 
 # Showcase
 ## Spieler Inventar ansehen
-<img src="./../../gifs/sample_plugin/inv-command-showcase.gif" style="border-radius: 12px">
+<img src="./../../gifs/sample_plugin/inv-command-showcase.gif">
 
 
 ## Hat
-<img src="./../../gifs/sample_plugin/hat-command-showcase.gif" style="border-radius: 12px">
+<img src="./../../gifs/sample_plugin/hat-command-showcase.gif">
 
 ## Lockchest
-<img src="./../../gifs/sample_plugin/lockchest-showcase.gif" style="border-radius: 12px">
+<img src="./../../gifs/sample_plugin/lockchest-showcase.gif">
+
