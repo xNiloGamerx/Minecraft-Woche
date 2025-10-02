@@ -1,0 +1,28 @@
+name: Update Daily Gif
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # jede Minute
+  workflow_dispatch: # optional: manuell starten im UI
+
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: +1 on the current gif name
+        run: |
+          zahl=$(cat README.md | grep -o -P -m 1 '(?<=\"Tag_)[0-9]\"') && zahl=$((zahl + 1)) && sed -i "s/Tag_[0-9]\b/Tag_$zahl/" README.md
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add log.txt
+          git commit -m "Automatisches Update: $(date)" || echo "Nichts zu committen"
+          git push
