@@ -34,13 +34,13 @@ jobs:
         # only run when workflow is started as schedule, to start the workflow once to start the cronjob.
         if: ${{ github.event_name == 'schedule' }}
         run: |
-          if [ "${{ steps.update.outputs.day_num }}" -eq -1 ]; then
+          if [ "${{ steps.update_gif_num.outputs.day_num }}" -eq -1 ]; then
             echo "Skipping step cause no day num was found!"
           else
             echo Committing Update README from Day ${{ steps.update.outputs.zahl }}
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add README.md
-            git commit -m "Updated daily GIF: Day ${{ steps.update.outputs.day_num }}" || echo "Nothing to commit!"
+            git commit -m "Updated daily GIF: Day ${{ steps.update_gif_num.outputs.day_num }}" || echo "Nothing to commit!"
             git push
           fi
