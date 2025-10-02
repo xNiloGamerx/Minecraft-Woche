@@ -1,0 +1,28 @@
+name: Add Line To Temp File
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # jede Minute
+  workflow_dispatch: # optional: manuell starten im UI
+
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Append line to file
+        run: |
+          echo "Neue Zeile um $(date)" >> log.txt
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add log.txt
+          git commit -m "Automatisches Update: $(date)" || echo "Nichts zu committen"
+          git push
