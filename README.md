@@ -1,7 +1,7 @@
-<img src="./gifs/Tag_3.gif">
-<!-- <img src="./gifs/Tag_3.gif"> -->
-<!-- <img src="./gifs/Tag_3.gif"> -->
-<!-- <img src="./gifs/Tag_3.gif"> -->
+<img src="./gifs/Tag_4.gif">
+<!-- <img src="./gifs/Tag_4.gif"> -->
+<!-- <img src="./gifs/Tag_4.gif"> -->
+<!-- <img src="./gifs/Tag_4.gif"> -->
 
 # Setup Guide
 
