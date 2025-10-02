@@ -2,8 +2,8 @@ name: Update Daily Gif
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # jede Minute
-  workflow_dispatch: # optional: manuell starten im UI
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 jobs:
   append:
@@ -16,10 +16,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: +1 on the current gif name
+        # only run when workflow is started as schedule, to start the workflow once to start the cronjob.
+        if: ${{ github.event_name == 'schedule' }}
         run: |
           zahl=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[1-4]') && zahl=$((zahl + 1)) && sed -i "s/Tag_[1-4]\b/Tag_$zahl/" README.md
 
       - name: Commit and push changes
+        # only run when workflow is started as schedule, to start the workflow once to start the cronjob.
+        if: ${{ github.event_name == 'schedule' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
