@@ -20,16 +20,27 @@ jobs:
         if: ${{ github.event_name == 'schedule' }}
         id: update_gif_num
         run: |
-          day_num=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[1-3]') && day_num=$((day_num + 1)) && sed -i "s/Tag_[1-4]\b/Tag_$day_num/" README.md
+          day_num=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[1-3]' || true)
+          if [ -z "$day_num" ]; then
+            echo "No day number found, day number set to -1, skipping next step"
+            day_num = -1
+          else
+            day_num=$((day_num + 1))
+            sed -i "s/Tag_[1-4]\b/Tag_$day_num/" README.md
+          fi
           echo "day_num=$day_num" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
         # only run when workflow is started as schedule, to start the workflow once to start the cronjob.
         if: ${{ github.event_name == 'schedule' }}
         run: |
-          echo Committing Update README from Day ${{ steps.update.outputs.zahl }}
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Updated daily GIF: Day ${{ steps.update.outputs.zahl }}" || echo "Nothing to commit!"
-          git push
+          if [ "${{ steps.update.outputs.zahl }}" -eq -1 ]; then
+            echo "Skipping step cause no day num was found!"
+          else
+            echo Committing Update README from Day ${{ steps.update.outputs.zahl }}
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "Updated daily GIF: Day ${{ steps.update.outputs.zahl }}" || echo "Nothing to commit!"
+            git push
+          fi
