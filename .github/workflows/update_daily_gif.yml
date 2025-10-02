@@ -17,7 +17,7 @@ jobs:
 
       - name: +1 on the current gif name
         run: |
-          zahl=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[0-9]') && zahl=$((zahl + 1)) && sed -i "s/Tag_[0-9]\b/Tag_$zahl/" README.md
+          zahl=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[1-4]') && zahl=$((zahl + 1)) && sed -i "s/Tag_[1-4]\b/Tag_$zahl/" README.md
 
       - name: Commit and push changes
         run: |
