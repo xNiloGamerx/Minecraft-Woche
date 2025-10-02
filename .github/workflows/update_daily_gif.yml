@@ -23,7 +23,7 @@ jobs:
           day_num=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[1-3]' || true)
           if [ -z "$day_num" ]; then
             echo "No day number found, day number set to -1, skipping next step"
-            day_num = -1
+            day_num=-1
           else
             day_num=$((day_num + 1))
             sed -i "s/Tag_[1-4]\b/Tag_$day_num/" README.md
