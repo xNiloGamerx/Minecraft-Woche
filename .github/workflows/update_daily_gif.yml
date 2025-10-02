@@ -2,7 +2,7 @@ name: Update Daily Gif
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 jobs:
@@ -17,12 +17,12 @@ jobs:
 
       - name: +1 on the current gif name
         # only run when workflow is started as schedule, to start the workflow once to start the cronjob.
-        #if: ${{ github.event_name == 'schedule' }}
+        if: ${{ github.event_name == 'schedule' }}
         id: update_gif_num
         run: |
           day_num=$(cat README.md | grep -o -P -m 1 '(?<=Tag_)[1-3]' || true)
           if [ -z "$day_num" ]; then
-            echo "No day number found, day number set to -1, skipping next step"
+            echo "No day number found, day number set to -1, skipping step"
             day_num=-1
           else
             day_num=$((day_num + 1))
@@ -32,7 +32,7 @@ jobs:
 
       - name: Commit and push changes
         # only run when workflow is started as schedule, to start the workflow once to start the cronjob.
-        #if: ${{ github.event_name == 'schedule' }}
+        if: ${{ github.event_name == 'schedule' }}
         run: |
           if [ "${{ steps.update_gif_num.outputs.day_num }}" -eq -1 ]; then
             echo "Skipping step cause no day num was found!"
