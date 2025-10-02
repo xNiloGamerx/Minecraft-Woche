@@ -1,4 +1,4 @@
-<img src="./gifs/Tag_1.gif">
+<img src="./gifs/Tag_2.gif">
 <!-- <img src="./gifs/Tag_2.gif"> -->
 <!-- <img src="./gifs/Tag_2.gif"> -->
 <!-- <img src="./gifs/Tag_2.gif"> -->
