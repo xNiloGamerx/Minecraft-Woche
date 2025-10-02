@@ -1,8 +1,8 @@
 name: Add Line To Temp File
 
 on:
-  schedule:
-    - cron: "*/5 * * * *" # jede Minute
+  # schedule:
+  #  - cron: "*/5 * * * *" # jede Minute
   workflow_dispatch: # optional: manuell starten im UI
 
 jobs:
