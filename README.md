@@ -25,6 +25,9 @@
 5. [Zusatz ➕](#zusatz-)
     1. [Output Ordner der Build Datei festlegen 📂](#output-ordner-der-build-datei-festlegen-)
 
+6. [Projects 🚀](#projects-)
+    1. [Sample 🧪](#sample-)
+
 <br>
 <br>
 
@@ -222,3 +225,19 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
 
 <!-- ↑ Zusatz -->
+
+
+<!-- ↓ Projects ↓ -->
+
+# Projects 🚀
+
+## Sample 🧪
+[💻 Zum Projekt →](./projects/Sample/)
+<!-- https://images.weserv.nl/?url=https://avatars.githubusercontent.com/xNiloGamerx?v=4&h=30&w=30&fit=cover&mask=circle&maxage=7d <- Das ehrlich cool, bearbeitet Bilder quasi live -->
+- Author: <img align="center" src="https://img.shields.io/badge/xNiloGamerx-1E242A?style=flat&logo=data:image/png%2bxml;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE+0lEQVR4nJ2W228UVRzHz9xndnb22ha6FAsBWprSFKG2CAWBBDBWW6UNvEAiUZ5sKglV2xgDogQFBDEkiCYYE9T6B6j/gI2X+IYQjZGEykNrlKQ+EKrJfv2e2dnt7nanu/Qk357tuczn/G5nRogamheNatQO6j3Pdb9jP0P9G2gmGDtPbZdra3lmNaBDjVF/UqhRM9Fo9FW5d2lQ1z3AzXcfAlgq151iP/QwVirUSSq7ZOi85DPeodRqUJVu+jK/MeZ5S4aW7Z1YFM7JM8WbbdsGhytKURRf5WP533Jv2WHeXiymJYtVVa0MDTlM8ZzcW8Htg+WWOkEy1AT2LTINtGRSiFqG/39dzEF93C3My72xhSG4y1BGisHjleJUDs5bY+oaUqaywPKkIRDRQy32JUstD9XC6nQBmDFUqZgi8NXENXx4+WJh7pn+Afz04w/o7lgDR2OsFTUsOaf9S4Z/ngjLzHKwQUub0y6uf3wFswAuTnxdmHtpeBiyfXL6FOo9Fa5lSuvCsr5Xgi/UAjZ1BU2ewKYNLT5gz3VADHwDJ5gfPnbMHx8xdHQnHeiMveeGgs9J8PfVwLqqoKUxhUzbFbidv2Jj329Yte8/iMdu4XSiH7e45udEGvdaW3FT13GD4WjUNFiynis/e1KExVdKC8DNaQP1de2w228i2nkXRsd9JDpnCQYuJYdousBtxcAs+1+odbKeuTcR7uppCZ6rZrFlGH4Gq9Y6eB03kOjJIsVebAPeXzaMvzk3pZr4i+vbAtdrIVkd6EFN4FxGa7kyMVcituk20l33ILoe4PLyY77Fv9PizcFaXa6vXMcl4FBX58GFelVyl4Vqr0VyAy3eOIOry0dwn2PdwZwRfnOVuTr3El80xqXKu78RYvM/eKvxOHqDQ2lF6zQm1yLgb6XF58MWSFfpmhYK191uqImnSkPBw1qmuRhU6l0J3l4RylvHYFIVrFb0eajqIkHZQoMZuNcuConrONXAW/NX5kz5pK4b8xYG8XOaL8Fw2iGstXjDbsErHOvngXaxv5q/aPKuZklFXTfsysy9m4NvpIKlDk9cckdrcZipAejeTtiNoxCxnYjH96Cv/gU8zvkLdDNv/kJWq0FvWVal+/p48dvJpu7kwDE4tg7FaIJqNLB8MrmHZF6HzZpV04ewvOkUPqXFj6T2Y3+yz0+uLsIT0itUmlovf/NjoBhMA//wyj8COTBEZWNeHI5JV8V2M3keheF151wX6YDlboJYNoKB+F70NRzFgbojPvRNxn0osHI1JS+RwwvBWYKfE5UaJ08XwNHt0OlOnW71wd4OGLTWqT8KsfIMRgnvcHvwMucOEvw5+06qntpRGXyqIjQAq3T1hGPxvWu3IbLmM+jRrkKsrcbXeIBeCGMZ1mfG8IFeh3GOb6H6gjUZ6nnqSZnt8+AvvGpfmrFYSrE1cdJedSVrMH6auYLlE4FJF/vwFSfgrv4IIroF61KD6ODYIVp8IoitjPMItVXWuW1n455X/fO2pOl1g4oam1IIFarNJGuCmT4II/kshLcbDZFOjNL9/bzBZHzHhVJ4Nydyh7hj2XblmFZrkcyIbST2slzFtMb61Wml6e2CiGzAi00nWVa7MJB4GvsIGmVWH86Bp+n60QNC2EuCFjdVi6j2yrO9qtV8znB7JoXTOt3jtM/1Jgfnxgg6ItTJy0KcdYXYJpfX8sz/AYYRc2N60enJAAAAAElFTkSuQmCC">
+
+- Minecraft Version: `1.21.8`
+
+- Template: `Paper`
+
+- Build System: `Gradle`
