@@ -91,7 +91,10 @@ Kisten sperren per command.
 <img src="./../../gifs/sample_plugin/hat-command-showcase.gif" width="750px" alt="Loading hat command showcase...">
 
 ## Lockchest
-<img src="./../../gifs/sample_plugin/lockchest-showcase.gif" width="750px" alt="Loading lockchest showcase...">
+![Loading lockchest showcase...](./../../gifs/sample_plugin/lockchest-showcase.gif)
+<!-- <img src="./../../gifs/sample_plugin/lockchest-showcase.gif" width="750px" alt="Loading lockchest showcase..."> -->
+
+
 
 
 
