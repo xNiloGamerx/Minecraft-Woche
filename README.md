@@ -284,7 +284,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>Dennis</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=dennetic" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3ADennis" title="Pull Requests">📥</a>
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Dennis" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3ADennis" title="Pull Requests">📥</a>
                 </a>
             </td>
             <td align="center" valign="center" width="25%">
