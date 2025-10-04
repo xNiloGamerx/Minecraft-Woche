@@ -254,8 +254,6 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 # Contributors ✨
 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table align="center">
     <tbody>
         <tr>
@@ -266,7 +264,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>xNiloGamerx</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=xNiloGamerx" title="Commits">💻</a> 📖
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=xNiloGamerx" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3AxNiloGamerx" title="Pull Requests">📥</a>
                 </a>
             </td>
             <td align="center" valign="center" width="25%">
@@ -276,7 +274,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>OWLLaurence</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=OWLLaurence" title="Commits">💻</a> 📖
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=OWLLaurence" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3AOWLLaurence" title="Pull Requests">📥</a>
                 </a>
             </td>
             <td align="center" valign="center" width="25%">
@@ -286,7 +284,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>Dennis</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=dennetic" title="Commits">💻</a> 📝
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=dennetic" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3ADennis" title="Pull Requests">📥</a>
                 </a>
             </td>
             <td align="center" valign="center" width="25%">
@@ -296,7 +294,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>Nils</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Nils" title="Commits">💻</a> 📝
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Nils" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3ANils" title="Pull Requests">📥</a>
                 </a>
             </td>
         </tr>
@@ -309,7 +307,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>Daniel</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Daniel" title="Commits">💻</a> 📝
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Daniel" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3ADaniel" title="Pull Requests">📥</a>
                 </a>
             </td>
             <td align="center" valign="center" width="25%">
@@ -319,7 +317,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     <div>
                         <b>Lukas</b>
                     </div>
-                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Lukas" title="Commits">💻</a> 📝
+                    <a href="https://github.com/xNiloGamerx/Minecraft-Woche/commits?author=Lukas" title="Commits">💻</a> <a href="https://github.com/xNiloGamerx/Minecraft-Woche/pulls?q=user%3ALukas" title="Pull Requests">📥</a>
                 </a>
             </td>
             <td align="center" valign="center" width="25%"></td>
