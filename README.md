@@ -254,73 +254,77 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 # Contributors ✨
 
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table align="center">
-  <tr>
-    <td align="center">
-        <a href="https://github.com/xNiloGamerx">
-          <img src="https://images.weserv.nl/?url=https://github.com/xNiloGamerx.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
-          <br />
-          <sub>
-              <b>xNiloGamerx</b>
-          </sub>
-          <br />
-          💻 📖
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/OWLLaurence">
-          <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
-          <br />
-          <sub>
-              <b>OWLLaurence</b>
-          </sub>
-          <br />
-          💻 📖
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://www.tiktok.com/@dennetic.mov">
-          <img src="./imgs/profile_pictures/dennetic-pfp.png" width="100px;" alt=""/>
-          <br />
-          <sub>
-              <b>Dennis</b>
-          </sub>
-          <br />
-          💻 📝
-        </a>
-    </td>
-    <td align="center">
-        <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
-        <br />
-        <sub>
-            <b>Nils</b>
-        </sub>
-        <br />
-        💻 📝
-    </td>
-  </tr>
-  <tr align="">
-    <td></td>
-    <td align="center">
-        <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
-        <br />
-        <sub>
-            <b>Daniel</b>
-        </sub>
-        <br />
-        💻 📝
-    </td>
-    <td align="center">
-        <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
-        <br />
-        <sub>
-            <b>Lukas</b>
-        </sub>
-        <br />
-        💻 📝
-    </td>
-    <td></td>
-  </tr>
+    <tbody>
+        <tr>
+            <td align="center" valign="center" width="14.28%">
+                <a href="https://github.com/xNiloGamerx">
+                    <img src="https://images.weserv.nl/?url=https://github.com/xNiloGamerx.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
+                    <br />
+                    <div>
+                        <b>xNiloGamerx</b>
+                    </div>
+                    💻 📖
+                </a>
+            </td>
+            <td align="center" valign="center" width="14.28%">
+                <a href="https://github.com/OWLLaurence">
+                    <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
+                    <br />
+                    <div>
+                        <b>OWLLaurence</b>
+                    </div>
+                    💻 📖
+                </a>
+            </td>
+            <td align="center" valign="center" width="14.28%">
+                <a href="https://www.tiktok.com/@dennetic.mov">
+                    <img src="https://images.weserv.nl/?url=https://raw.githubusercontent.com/xNiloGamerx/Minecraft-Woche/850f2c067ed8add34913b1885d8f32056c6dc10c/imgs/profile_pictures/dennetic-pfp.png&fit=cover&maxage=7d&w=75&h=75" width="75px" alt=""/>
+                    <br />
+                    <div>
+                        <b>Dennis</b>
+                    </div>
+                    💻 📝
+                </a>
+            </td>
+            <td align="center" valign="center" width="14.28%">
+                <a href="">
+                    <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
+                    <br />
+                    <div>
+                        <b>Nils</b>
+                    </div>
+                    💻 📝
+                </a>
+            </td>
+        </tr>
+        <tr align="">
+            <td align="center" valign="center" width="14.28%"></td>
+            <td align="center" valign="center" width="14.28%">
+                <a href="">
+                    <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
+                    <br />
+                    <div>
+                        <b>Daniel</b>
+                    </div>
+                    💻 📝
+                </a>
+            </td>
+            <td align="center" valign="center" width="14.28%">
+                <a href="">
+                    <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
+                    <br />
+                    <div>
+                        <b>Lukas</b>
+                    </div>
+                    💻 📝
+                </a>
+            </td>
+            <td align="center" valign="center" width="14.28%"></td>
+        </tr>
+    <tbody>
 </table>
 
 <!-- Back to top Button -->
