@@ -258,7 +258,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
   <tr>
     <td align="center">
         <a href="https://github.com/xNiloGamerx">
-          <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/xNiloGamerx?v=4&h=1000&w=1000&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
+          <img src="https://images.weserv.nl/?url=https://github.com/xNiloGamerx.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
           <br />
           <sub>
               <b>xNiloGamerx</b>
@@ -268,8 +268,8 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/xNiloGamerx">
-          <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/OWLLaurence?v=4&h=1000&w=1000&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
+        <a href="https://github.com/OWLLaurence">
+          <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
           <br />
           <sub>
               <b>OWLLaurence</b>
@@ -290,7 +290,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
         </a>
     </td>
     <td align="center">
-        <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/194209397?v=4&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
+        <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
         <br />
         <sub>
             <b>Nils</b>
@@ -302,7 +302,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
   <tr align="">
     <td></td>
     <td align="center">
-        <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/194209397?v=4&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
+        <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
         <br />
         <sub>
             <b>Daniel</b>
@@ -311,7 +311,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
         💻 📝
     </td>
     <td align="center">
-        <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/194209397?v=4&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
+        <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d" width="100px;" alt=""/>
         <br />
         <sub>
             <b>Lukas</b>
