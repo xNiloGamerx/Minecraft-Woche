@@ -246,3 +246,8 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
 
 <!-- ↑ Projects -->
+
+
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">
+  Example&nbsp;↗
+</a>
