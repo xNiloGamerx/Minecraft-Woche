@@ -259,7 +259,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <table align="center">
     <tbody>
         <tr>
-            <td align="center" valign="center" width="14.28%">
+            <td align="center" valign="center" width="25%">
                 <a href="https://github.com/xNiloGamerx">
                     <img src="https://images.weserv.nl/?url=https://github.com/xNiloGamerx.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
                     <br />
@@ -269,7 +269,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     💻 📖
                 </a>
             </td>
-            <td align="center" valign="center" width="14.28%">
+            <td align="center" valign="center" width="25%">
                 <a href="https://github.com/OWLLaurence">
                     <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
                     <br />
@@ -279,7 +279,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     💻 📖
                 </a>
             </td>
-            <td align="center" valign="center" width="14.28%">
+            <td align="center" valign="center" width="25%">
                 <a href="https://www.tiktok.com/@dennetic.mov">
                     <img src="https://images.weserv.nl/?url=https://raw.githubusercontent.com/xNiloGamerx/Minecraft-Woche/850f2c067ed8add34913b1885d8f32056c6dc10c/imgs/profile_pictures/dennetic-pfp.png&fit=cover&maxage=7d&w=75&h=75" width="75px" alt=""/>
                     <br />
@@ -289,7 +289,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     💻 📝
                 </a>
             </td>
-            <td align="center" valign="center" width="14.28%">
+            <td align="center" valign="center" width="25%">
                 <a href="">
                     <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
                     <br />
@@ -301,8 +301,8 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
             </td>
         </tr>
         <tr align="">
-            <td align="center" valign="center" width="14.28%"></td>
-            <td align="center" valign="center" width="14.28%">
+            <td align="center" valign="center" width="25%"></td>
+            <td align="center" valign="center" width="25%">
                 <a href="">
                     <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
                     <br />
@@ -312,7 +312,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     💻 📝
                 </a>
             </td>
-            <td align="center" valign="center" width="14.28%">
+            <td align="center" valign="center" width="25%">
                 <a href="">
                     <img src="https://images.weserv.nl/?url=https://github.com/OWLLaurence.png&fit=cover&mask=circle&maxage=7d&w=75&h=75" width="75px" alt=""/>
                     <br />
@@ -322,7 +322,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
                     💻 📝
                 </a>
             </td>
-            <td align="center" valign="center" width="14.28%"></td>
+            <td align="center" valign="center" width="25%"></td>
         </tr>
     <tbody>
 </table>
