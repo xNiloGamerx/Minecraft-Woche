@@ -16,19 +16,21 @@
 
     4. [Download Paper](#download-paper-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
-2. [Paper Server einrichten](#paper-server-einrichten-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
+2. [Minecraft einrichten](#minecraft-einrichten-) <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/12/Grass_Block_JE2.png/revision/latest?cb=20200830142618" width="25px" align="center"/>
 
-3. [IntelliJ einrichten](#intellij-einrichten-) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
+3. [Paper Server einrichten](#paper-server-einrichten-) <img src="https://cdn.worldvectorlogo.com/logos/papermc.svg" width="25px" align="center"/>
 
-4. [Erstellen eines ersten Plugins 🛠️](#erstellen-eines-ersten-plugins)
+4. [IntelliJ einrichten](#intellij-einrichten-) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/768px-IntelliJ_IDEA_Icon.svg.png?20200803071016g" width="25px" align="center"/>
 
-5. [Zusatz ➕](#zusatz-)
+5. [Erstellen eines ersten Plugins 🛠️](#erstellen-eines-ersten-plugins)
+
+6. [Zusatz ➕](#zusatz-)
     1. [Output Ordner der Build Datei festlegen 📂](#output-ordner-der-build-datei-festlegen-)
 
-6. [Projects 🚀](#projects-)
+7. [Projects 🚀](#projects-)
     1. [Sample 🧪](#sample-)
 
-7. [Contributors ✨](#contributors-)
+8. [Contributors ✨](#contributors-)
 
 <br>
 <br>
@@ -43,6 +45,9 @@ Minecraft ist das Computerspiel für welches wir Plugins erstellen wollen.
 
 ### Website
 &nbsp;&nbsp;&nbsp;&nbsp;[Minecraft Download Page](https://www.minecraft.net/de-de/download)
+
+> ⚠️ **Wichtig:**  
+> Minecraft Installer nicht ausführen
 
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
@@ -116,6 +121,24 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 <br>
 <br>
+
+<!-- ↓ Minecraft einrichten ↓ -->
+
+# Minecraft einrichten <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/12/Grass_Block_JE2.png/revision/latest?cb=20200830142618" width="40px" align="center"/>
+
+### Bei XBox anmelden
+1. XBox app öffnen
+2. Mit Microsoft Account anmelden
+
+### Minecraft Installer öffnen
+1. Minecraft Installer im Download Ordner doppelt anklicken
+2. Installer durchlaufen
+3. Durch das anmelden bei XBox ist der Microsoft Account bereits bei Minecraft festgelegt
+
+<!-- Back to top Button -->
+<p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
+
+<!-- ↑ Minecraft einrichten ↑ -->
 
 <!-- ↓ Paper Server einrichten ↓ -->
 
