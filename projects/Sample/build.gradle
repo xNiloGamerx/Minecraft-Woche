@@ -55,5 +55,5 @@ processResources {
 }
 
 tasks.jar {
-    destinationDirectory = file("C:/Users/Niklas/Documents/009_MinecraftPlugins/1.21.8 - Server/plugins")
+    destinationDirectory = file("C:/Users/Minecraft-Woche/Documents/1.21.8 - Server/plugins")
 }

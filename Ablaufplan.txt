@@ -1,0 +1,27 @@
+Tag 1:
+- Arbeitsumgebung aufsetzen
+- Java Basics:
+  - Was ist Java?
+  - Syntax
+  - If-Verzweigung
+  - For-Schleife
+  - While-Schleife
+  - Datentypen
+- Übungen
+
+Tag 2:
+- Objektorientierung
+  - Klassen
+  - Objekte
+- Übungen
+- Minecraft Plugin Basics
+  - Erster Command
+  - Erster Listener
+
+Tag 3:
+- Selbstständiges entwickeln eines Minecraft Plugins
+
+Tag 4:
+- Selbstständiges entwickeln eines Minecraft Plugins
+
+Dieser Ablaufplan ist natürlich nicht in Stein gemeißelt. Sollten die Azubis uns sagen, dass sie sich an einer Stelle gerne mehr mit dem Thema beschäftigen wollen, verschieben wir den Zeitplan natürlich.
