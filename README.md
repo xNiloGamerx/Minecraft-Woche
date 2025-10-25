@@ -294,17 +294,15 @@ Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es mög
      ```
 
   2. Jetzt muss eine neue Start Konfiguration in IntelliJ hinzugefügt werden  
-    <img src="https://docs.papermc.io/_astro/config_dropdown.BFxL9k7t_Z1Pvn9Q.webp">
-    <br>
+    ![Edit Configuration](https://docs.papermc.io/_astro/config_dropdown.BFxL9k7t_Z1Pvn9Q.webp)  
     *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
     <br><br>
-    <img src="https://docs.papermc.io/_astro/config_add.BZo3OiyP_ZzqDYh.webp" width="900px">
-    <br>
+    ![Set Configuration](https://docs.papermc.io/_astro/config_add.BZo3OiyP_ZzqDYh.webp)  
     *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
 
-  3. Anschließend startet man zuerst den Server über den [modifierten Start command](#modify-server-start-command), z.B. über ein start.bat Script
+  4. Anschließend startet man zuerst den Server über den [modifierten Start command](#modify-server-start-command), z.B. über ein start.bat Script
   
-  4. Der letzte Schritt ist das Starten einer Debug Session in IntelliJ  
+  5. Der letzte Schritt ist das Starten einer Debug Session in IntelliJ  
     <img src="https://docs.papermc.io/_astro/debugger_connect.mnUOoaKC_Z2b4R01.webp">
     <br>
     *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
