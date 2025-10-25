@@ -303,8 +303,7 @@ Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es mög
   4. Anschließend startet man zuerst den Server über den [modifierten Start command](#modify-server-start-command), z.B. über ein start.bat Script
   
   5. Der letzte Schritt ist das Starten einer Debug Session in IntelliJ  
-    <img src="https://docs.papermc.io/_astro/debugger_connect.mnUOoaKC_Z2b4R01.webp">
-    <br>
+    ![Start Debugging](https://docs.papermc.io/_astro/debugger_connect.mnUOoaKC_Z2b4R01.webp)  
     *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
 
 
