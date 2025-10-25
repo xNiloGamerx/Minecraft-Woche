@@ -280,13 +280,15 @@ goto loop
 Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es möglich, Fehler die nicht beim kompilieren entdeckt wurden leichter zu erkennen. Für das Debuggen bietet Paper zwei Möglichkeiten, zum einen Logger Ausgaben in der Konsole oder das Nutzen eines Remote Debugger. Dieser pausiert den Code an einer definierten Stelle und man kann sich Variablen live ansehen.
 
 - **Konsole**  
-  1. Beispiel:  
+  1. Beispiel:
+     
      ```java
      plugin.getComponentLogger().debug(Component.text("SuperDuperBad Thing has happened"));
      ```
 
 - **Remote Debugger**  
-  1. Zunächst muss der Startup Command des Servers modifiziert werden
+  1. <p id="modify-server-start-command">Zunächst muss der Startup Command des Servers modifiziert werden</p>
+     
      ```batch
      java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar paper-1.21.8-60.jar nogui
      ```
