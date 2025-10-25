@@ -27,7 +27,7 @@
 6. [Zusatz ➕](#zusatz-)
     1. [Output Ordner der Build Datei festlegen 📂](#output-ordner-der-build-datei-festlegen-)
     2. [Looping startup Script 🔁](#looping-startup-script-)
-    3. [Debugging Plugins (Hotswap) 🔥]()
+    3. [Debugging Plugins (Hotswap) 🔥](#debugging-plugins-hotswap-)
 
 7. [Projects 🚀](#projects-)
     1. [Sample 🧪](#sample-)
@@ -300,7 +300,7 @@ Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es mög
     <br>
     *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
 
-  3. Anschließend startet man zuerst den Server über den [modifierten Start command](), z.B. über ein start.bat Script
+  3. Anschließend startet man zuerst den Server über den [modifierten Start command](#modify-server-start-command), z.B. über ein start.bat Script
   
   4. Der letzte Schritt ist das Starten einer Debug Session in IntelliJ  
     <img src="https://docs.papermc.io/_astro/debugger_connect.mnUOoaKC_Z2b4R01.webp">
