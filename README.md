@@ -26,6 +26,8 @@
 
 6. [Zusatz ➕](#zusatz-)
     1. [Output Ordner der Build Datei festlegen 📂](#output-ordner-der-build-datei-festlegen-)
+    2. [Looping startup Script 🔁](#looping-startup-script-)
+    3. [Debugging Plugins (Hotswap) 🔥]()
 
 7. [Projects 🚀](#projects-)
     1. [Sample 🧪](#sample-)
@@ -248,6 +250,63 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
+
+
+### Looping startup Script 🔁
+Nach Änderungen die man an einem Plugin gemacht hat, ist es nötig den Server neu zu starten. Ohne Looping Script, würde sich die Konsole des aktuell laufenden Servers einfach schließen.
+
+```batch
+@echo off
+:: Setting the title of the cmd
+title Minecraft Server
+
+:loop
+:: Server start command
+java -jar paper-<version>.jar nogui
+
+echo Server crashed or restarted... Trying to start again in one second
+:: Wait one second
+timeout /t 1
+
+:: Go back to loop start
+goto loop
+```
+
+<!-- Back to top Button -->
+<p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
+
+
+### Debugging Plugins (Hotswap) 🔥
+Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es möglich, Fehler die nicht beim kompilieren entdeckt wurden leichter zu erkennen. Für das Debuggen bietet Paper zwei Möglichkeiten, zum einen Logger Ausgaben in der Konsole oder das Nutzen eines Remote Debugger. Dieser pausiert den Code an einer definierten Stelle und man kann sich Variablen live ansehen.
+
+- **Konsole**  
+  1. Beispiel:  
+     ```java
+     plugin.getComponentLogger().debug(Component.text("SuperDuperBad Thing has happened"));
+     ```
+
+- **Remote Debugger**  
+  1. Zunächst muss der Startup Command des Servers modifiziert werden
+     ```batch
+     java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar paper-1.21.8-60.jar nogui
+     ```
+
+  2. Jetzt muss eine neue Start Konfiguration in IntelliJ hinzugefügt werden  
+    <img src="https://docs.papermc.io/_astro/config_dropdown.BFxL9k7t_Z1Pvn9Q.webp">
+    <br>
+    *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
+    <br><br>
+    <img src="https://docs.papermc.io/_astro/config_add.BZo3OiyP_ZzqDYh.webp" width="900px">
+    <br>
+    *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
+
+  3. Anschließend startet man zuerst den Server über den [modifierten Start command](), z.B. über ein start.bat Script
+  
+  4. Der letzte Schritt ist das Starten einer Debug Session in IntelliJ  
+    <img src="https://docs.papermc.io/_astro/debugger_connect.mnUOoaKC_Z2b4R01.webp">
+    <br>
+    *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
+
 
 <!-- ↑ Zusatz -->
 
