@@ -280,18 +280,17 @@ goto loop
 Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es möglich, Fehler die nicht beim kompilieren entdeckt wurden leichter zu erkennen. Für das Debuggen bietet Paper zwei Möglichkeiten, zum einen Logger Ausgaben in der Konsole oder das Nutzen eines Remote Debugger. Dieser pausiert den Code an einer definierten Stelle und man kann sich Variablen live ansehen.
 
 - **Konsole**  
-  1. Beispiel:
-     
-     ```java
-     plugin.getComponentLogger().debug(Component.text("SuperDuperBad Thing has happened"));
-     ```
+1. Beispiel:
+    
+   ```java
+   plugin.getComponentLogger().debug(Component.text("SuperDuperBad Thing has happened"));
+   ```
 
-- **Remote Debugger**  
-  1. <p id="modify-server-start-command">Zunächst muss der Startup Command des Servers modifiziert werden</p>
-     
-     ```batch
-     java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar paper-1.21.8-60.jar nogui
-     ```
+- <span id="remote-debugger"><strong>Remote Debugger</strong></span>
+1. <span id="modify-server-start-command">Zunächst muss der Startup Command des Servers modifiziert werden</span>
+   ```batch
+   java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar paper-1.21.8-60.jar nogui
+   ```
 
   2. Jetzt muss eine neue Start Konfiguration in IntelliJ hinzugefügt werden  
     ![Edit Configuration](https://docs.papermc.io/_astro/config_dropdown.BFxL9k7t_Z1Pvn9Q.webp)  
@@ -306,6 +305,13 @@ Minecraft Plugins zu Debuggen ist eine große erleichterung, denn so ist es mög
     ![Start Debugging](https://docs.papermc.io/_astro/debugger_connect.mnUOoaKC_Z2b4R01.webp)  
     *Bild Quelle: [Paper Documentation](https://docs.papermc.io/paper/dev/debugging/)*
 
+
+- **Hot Swap**  
+Voraussetzung für Hot Swap ist der [Remote Debugger](#remote-debugger).  
+Nachdem eine Debug Session gestartet wurde, können kleine Änderungen im Code direkt angewendet werden.  
+Man muss lediglich die Tastenkombination <kbd>Ctrl+F9</kbd> drücken.  
+Änderungen die Klassen, Events, Commands, usw. beinhalten werden nicht berücksichtigt.  
+**Wichtig**: Nach beenden der Debug Session muss das Plugin einmal gebaut werden um Änderungen dauerhaft im Plugin zu integrieren.
 
 <!-- ↑ Zusatz -->
 
