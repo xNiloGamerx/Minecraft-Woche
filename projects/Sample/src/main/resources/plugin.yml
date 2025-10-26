@@ -1,4 +1,4 @@
-name: Main
+name: Sample
 version: '1.0-SNAPSHOT'
 main: com.nik.sample.Main
 api-version: '1.21'
@@ -7,6 +7,9 @@ commands:
     description: Get Inventory of specified player
   hat:
     description: Equip your current item as a hat
+
+  henchant:
+    description: Henchant command to open Henchant Gui
 
   lock:
     description: Lock a chest with a password

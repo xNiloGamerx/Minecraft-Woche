@@ -2,6 +2,7 @@ package com.nik.sample;
 
 import com.nik.sample.commands.InvCommand;
 import com.nik.sample.commands.hat.HatCommand;
+import com.nik.sample.commands.henchant.HenchantCommand;
 import com.nik.sample.config.Config;
 import com.nik.sample.lockchest.LockChestManager;
 import com.nik.sample.lockchest.commands.LockCommand;
@@ -51,6 +52,9 @@ public final class Main extends JavaPlugin {
 
         // Hat
         this.getCommand("hat").setExecutor(new HatCommand());
+
+        // Henchant
+        this.getCommand("henchant").setExecutor(new HenchantCommand());
 
         // Lock Chest
         lockChestManager = new LockChestManager();
