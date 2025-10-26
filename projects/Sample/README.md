@@ -67,6 +67,15 @@ Setze per command das Item, welches du aktuell in der Hand trägst als Helm
 | <kbd>/hat</kbd> | Setzt das aktuelle Item in der Hand als Helm. |
 
 
+## Henchant
+Eine Chest Gui die es enorm vereinfacht Enchantments auf ein Item zu packen. Funktioniert nur bei Tools und im Creative Mode.
+
+### Commands
+| Command              | Beschreibung             |
+|--------------------- |------------------------- |
+| <kbd>/henchant</kbd> | Öffnet die Henchant Gui. |
+
+
 ## Lockchest
 Kisten sperren per command.
 
