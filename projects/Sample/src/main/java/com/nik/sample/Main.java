@@ -1,6 +1,6 @@
 package com.nik.sample;
 
-import com.nik.sample.commands.InvCommand;
+import com.nik.sample.commands.inv.InvCommand;
 import com.nik.sample.commands.hat.HatCommand;
 import com.nik.sample.commands.henchant.HenchantCommand;
 import com.nik.sample.config.Config;

@@ -1,4 +1,4 @@
-package com.nik.sample.commands;
+package com.nik.sample.commands.inv;
 
 import com.nik.sample.Main;
 import net.kyori.adventure.text.Component;
@@ -17,7 +17,6 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.EventListener;
-import java.util.Objects;
 
 public class InvCommand implements CommandExecutor, EventListener, Listener {
     private Component chestInvTitle;
