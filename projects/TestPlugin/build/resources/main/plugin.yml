@@ -1,6 +1,0 @@
-name: TestPlugin
-version: '1.0-SNAPSHOT'
-
-main: com.nilo.testPlugin.Main
-api-version: '26.2'
-load: POSTWORLD
