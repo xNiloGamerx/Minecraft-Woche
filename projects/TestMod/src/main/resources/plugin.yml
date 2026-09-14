@@ -1,0 +1,6 @@
+name: TestPlugin
+version: '${version}'
+
+main: com.nilo.testPlugin.Main
+api-version: '26.2'
+load: POSTWORLD
