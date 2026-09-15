@@ -8,12 +8,18 @@ import net.kyori.adventure.text.object.PlayerHeadObjectContents;
 import java.util.List;
 
 public class Tag {
+    private final String id;
     private List<String> values;
     private List<String> signatures;
 
-    public Tag(List<String> values, List<String> signatures) {
+    public Tag(String id, List<String> values, List<String> signatures) {
+        this.id = id;
         this.values = values;
         this.signatures = signatures;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public Component getComponent() {
