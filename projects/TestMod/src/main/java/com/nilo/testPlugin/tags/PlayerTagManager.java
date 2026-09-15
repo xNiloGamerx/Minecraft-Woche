@@ -1,5 +1,6 @@
 package com.nilo.testPlugin.tags;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.w3c.dom.stylesheets.LinkStyle;
 
@@ -10,7 +11,10 @@ import java.util.UUID;
 public class PlayerTagManager {
     private static final HashMap<UUID, HashMap<String, Tag>> playerTags = new HashMap<UUID, HashMap<String, Tag>>();
 
-    public void addPlayer(Player player, List<Tag> tags) {
+    public static void initialize() {
+    }
+
+    public static void addPlayer(Player player, List<Tag> tags) {
         HashMap<String, Tag> tagMap = new HashMap<String, Tag>();
         for (Tag tag : tags) {
             tagMap.put(tag.getId(), tag);

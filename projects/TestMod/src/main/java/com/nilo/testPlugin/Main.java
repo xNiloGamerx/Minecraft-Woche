@@ -4,6 +4,8 @@ import com.nilo.testPlugin.commands.FontCommand;
 import com.nilo.testPlugin.commands.TagCommand;
 import com.nilo.testPlugin.commands.TestCommand;
 import com.nilo.testPlugin.event.ChestGuiInventoryClickEvent;
+import com.nilo.testPlugin.event.PlayerJoinEvent;
+import com.nilo.testPlugin.tags.PlayerTagManager;
 import com.nilo.testPlugin.tags.TagManager;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
 import org.bukkit.plugin.PluginManager;
@@ -15,9 +17,11 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         TagManager.initializeTags();
+        PlayerTagManager.initialize();
 
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new ChestGuiInventoryClickEvent(), this);
+        pm.registerEvents(new PlayerJoinEvent(), this);
 
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS, commands -> {
             commands.registrar().register(TestCommand.getCommand());
