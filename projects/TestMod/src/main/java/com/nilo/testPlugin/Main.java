@@ -6,16 +6,28 @@ import com.nilo.testPlugin.commands.TestCommand;
 import com.nilo.testPlugin.event.ChestGuiInventoryClickEvent;
 import com.nilo.testPlugin.event.PlayerJoinEvent;
 import com.nilo.testPlugin.tags.PlayerTagManager;
+import com.nilo.testPlugin.tags.Tag;
 import com.nilo.testPlugin.tags.TagManager;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
+import org.bukkit.configuration.serialization.ConfigurationSerialization;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
+    public static Main instance;
+
+    @Override
+    public void onLoad() {
+        instance = this;
+    }
 
     @Override
     public void onEnable() {
         // Plugin startup logic
+        ConfigurationSerialization.registerClass(Tag.class);
+
+        saveDefaultConfig();
+
         TagManager.initializeTags();
         PlayerTagManager.initialize();
 
@@ -33,5 +45,10 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        saveConfig();
+    }
+
+    public static Main getInstance() {
+        return instance;
     }
 }

@@ -145,6 +145,7 @@ public class TagManager {
     }
 
     public static Tag getTag(String name) {
+        if (!tags.containsKey(name)) return null;
         return tags.get(name);
     }
 
