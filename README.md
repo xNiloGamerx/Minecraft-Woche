@@ -64,11 +64,11 @@ Minecraft ist das Computerspiel für welches wir Plugins erstellen wollen.
 Java ist die absolute Basis, in dieser Objektorientierten Programmiersprache schreiben wir unsere Plugins.
 
 ### Benötigte Java-Version
-- Version: `JDK 21`
+- Version: `JDK 25`
 - Betriebssystem: `Windows`
 
 ### Website
-&nbsp;&nbsp;&nbsp;&nbsp;[Java JDK 21 Download Page](https://www.oracle.com/java/technologies/downloads/#jdk21-windows)
+&nbsp;&nbsp;&nbsp;&nbsp;[Java JDK 25 Download Page](https://www.oracle.com/java/technologies/downloads/#java25)
 
 <!-- Doppel Leerzeichen macht neue Zeile -->
 > **Note:**  
