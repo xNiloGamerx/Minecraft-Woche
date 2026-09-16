@@ -109,10 +109,12 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 &nbsp;&nbsp;&nbsp;&nbsp;Zum Beispiel:  
 &nbsp;&nbsp;&nbsp;&nbsp;`C:\Users\Max\1.21.8 - Server`
 
+
+
 ### Benötigte Paper-Version
 - Version: `1.21.8`
 - Build: `Newest Build`
-
+- Wird nicht mehr zwingend benötigt
 ### Website
 &nbsp;&nbsp;&nbsp;&nbsp;[Paper Download Page](https://papermc.io/downloads/paper)
 
@@ -219,7 +221,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
     4. Als Template `Paper` auswählen
     5. Als Build System `Gradle` auswählen
     6. Als Language `Java` auswählen
-    7. Als Minecraft Version die Version des installierten Paper Servers (in diesem Fall `1.21.8`) auswählen
+    7. Als Minecraft Version die Version des installierten Paper Servers (in diesem Fall `26.2`) auswählen
     8. Main Class zu **[domain]**.**[package]**.**`Main`** ändern
     9. Create klicken und abwarten
 
@@ -252,7 +254,7 @@ IntelliJ ist die IDE mit der wir unsere Plugins in der Programmiersprache Java e
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
 
 
-### Looping startup Script 🔁
+### Looping startup Script (nicht mehr Benötigt)🔁
 Nach Änderungen die man an einem Plugin gemacht hat, ist es nötig den Server neu zu starten. Ohne Looping Script, würde sich die Konsole des aktuell laufenden Servers einfach schließen.
 
 ```batch
@@ -271,6 +273,12 @@ timeout /t 1
 :: Go back to loop start
 goto loop
 ```
+
+### Neue Methode um Server zu starten
+
+In IntelliJ kann das Plugin erstellt werden, ohne dass der Paperserver erstellt wird. Hierzu muss nur die richtige Version gewählt werden und in den Gradle kann dann der Server gestartet werden.
+
+
 
 <!-- Back to top Button -->
 <p align="center"><a href="#setup-guide"><kbd>🔼 Back to top</kbd></a></p>
