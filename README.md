@@ -72,7 +72,7 @@ Java ist die absolute Basis, in dieser Objektorientierten Programmiersprache sch
 
 <!-- Doppel Leerzeichen macht neue Zeile -->
 > **Note:**  
-> Java JDK 21 wird benötigt um Plugins für die neueste Minecraft Version zu
+> Java JDK 25 wird benötigt um Plugins für die neueste Minecraft Version zu
 > erstellen. Sie enthält direkt das entsprechende JRE, weshalb man das
 > Runtime Environment nicht extra herunterladen muss.
 
