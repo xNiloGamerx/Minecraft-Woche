@@ -1,0 +1,6 @@
+name: bonto-plugin
+version: '${version}'
+
+main: com.nilo.bontoPlugin.Main
+api-version: '26.2'
+load: POSTWORLD
