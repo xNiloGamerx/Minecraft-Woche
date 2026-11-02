@@ -68,6 +68,7 @@ public class Main {
                 System.out.println("Die gewählte Option existiert nicht!");
                 break;
         }
+        scanner.nextLine();
     }
 
     public static void buchen(int id, int betrag) {
